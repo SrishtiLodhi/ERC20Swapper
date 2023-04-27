@@ -1,46 +1,21 @@
-ERC20Swapper
-ERC20Swapper is a smart contract that allows you to swap ETH for any ERC20 token on Ethereum network. It is designed to provide a simple way to exchange Ether for ERC20 tokens on-chain.
+#ERC20 Swapper
 
-Prerequisites
-Before you start, you will need the following:
+This project consists of two smart contracts, a Token contract and a Swapper contract. The Token contract is a basic ERC20 token, while the Swapper contract provides a function for swapping Ether for tokens.
 
-Node.js and npm (Node Package Manager)
-A code editor like Visual Studio Code
-An Ethereum wallet
-Some Ether and ERC20 tokens for testing purposes
-Hardhat framework
-Installation
-Clone this repository:
-bash
-Copy code
-git clone https://github.com/username/ERC20Swapper.git
-Install dependencies:
-bash
-Copy code
-cd ERC20Swapper
-npm install
-Create a .env file in the root directory of your project and add the following environment variables:
-makefile
-Copy code
-PRIVATE_KEY=<your-private-key>
-GOERLI_TESTNET_URL=<your-goerli-testnet-url>
-ETHERSCAN_API_KEY=<your-etherscan-api-key>
+#Getting Started
+
+To get started with the ERC20 Swapper project, follow these steps:
+
+Clone the repository to your local machine.
+Install the dependencies by running npm install.
+Compile the contracts by running npx hardhat compile.
+Deploy the contracts by running npx hardhat run scripts/deploy.js --network <network_name>. Make sure to replace <network_name> with the name of the network you want to deploy to.
+Verify the contracts by running npx hardhat run scripts/verify.js --network <network_name>. Make sure to replace <network_name> with the name of the network you want to verify the contracts on.
 Usage
-Compile the contracts:
-python
-Copy code
-npx hardhat compile
-Deploy the contracts to the Goerli network:
-arduino
-Copy code
-npx hardhat run scripts/deploy.js --network goerli
-Verify the contracts on Etherscan:
-arduino
-Copy code
-npx hardhat run scripts/verify.js --network goerli
-Interact with the Swapper contract using any Ethereum wallet that supports ERC20 tokens, such as MetaMask.
-Contributing
-Contributions are welcome! Please open an issue or pull request if you encounter a bug or have a suggestion for improvement.
+Once the contracts have been deployed, you can use the Swapper contract to swap Ether for tokens. To do so, call the swapEtherToToken function on the Swapper contract, passing in the address of the token you want to receive and the minimum number of tokens you expect to receive. The function will convert the Ether to tokens and transfer them to your account.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+#Development
+To run the tests, run npx hardhat test.
+
+#License
+This project is licensed under the MIT License - see the LICENSE file for details.
